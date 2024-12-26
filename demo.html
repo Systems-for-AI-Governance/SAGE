@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - SAIGRC</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .sandbox-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+        
+        .demo-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .demo-feature {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features.html">Features</a>
+                <a href="/challenges.html">Challenges</a>
+                <a href="/benefits.html">Benefits</a>
+                <a href="/demo.html">Demo</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Experience SAIGRC</h1>
+            <p>See how SAIGRC can transform your healthcare AI governance</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Product Demo</h2>
+            <div class="video-container">
+                <!-- Replace with actual demo video -->
+                <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Watch our comprehensive demo to see SAIGRC in action. Learn how to manage AI projects, track compliance, and monitor risks effectively.</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Interactive Sandbox</h2>
+            <div class="sandbox-container">
+                <h3>Try SAIGRC Features</h3>
+                <div class="demo-features">
+                    <div class="demo-feature">
+                        <h4>Risk Assessment</h4>
+                        <p>Test our risk assessment tools with sample data</p>
+                        <a href="#" class="cta-button">Try Now</a>
+                    </div>
+                    <div class="demo-feature">
+                        <h4>Incident Reporting</h4>
+                        <p>Experience our incident management system</p>
+                        <a href="#" class="cta-button">Try Now</a>
+                    </div>
+                    <div class="demo-feature">
+                        <h4>Compliance Checker</h4>
+                        <p>Test compliance monitoring features</p>
+                        <a href="#" class="cta-button">Try Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Getting Started</h2>
+            <div class="demo-features">
+                <div class="demo-feature">
+                    <h4>Documentation</h4>
+                    <p>Access comprehensive guides and API documentation</p>
+                    <a href="https://github.com/saigrc/docs" class="cta-button">View Docs</a>
+                </div>
+                <div class="demo-feature">
+                    <h4>Installation Guide</h4>
+                    <p>Step-by-step instructions for setting up SAIGRC</p>
+                    <a href="https://github.com/saigrc/installation" class="cta-button">Install Guide</a>
+                </div>
+                <div class="demo-feature">
+                    <h4>Community Support</h4>
+                    <p>Join our community for help and discussions</p>
+                    <a href="https://github.com/saigrc/discussions" class="cta-button">Join Community</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/demo.html">Demo</a></li>
+                    <li><a href="https://github.com/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

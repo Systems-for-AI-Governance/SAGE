@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges - SAIGRC</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .challenge-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #eee;
+        }
+        
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .infographic {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .info-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features.html">Features</a>
+                <a href="/challenges.html">Challenges</a>
+                <a href="/benefits.html">Benefits</a>
+                <a href="/demo.html">Demo</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Healthcare AI Challenges</h1>
+            <p>Understanding the complexities of implementing AI in healthcare</p>
+        </section>
+
+        <section class="infographic">
+            <div class="info-item">
+                <h3>Lack of Expertise</h3>
+                <p>Limited access to AI governance expertise in healthcare organizations</p>
+            </div>
+            <div class="info-item">
+                <h3>Budget Constraints</h3>
+                <p>High costs associated with traditional GRC solutions</p>
+            </div>
+            <div class="info-item">
+                <h3>Regulatory Complexities</h3>
+                <p>Complex and evolving regulatory landscape for healthcare AI</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>SAIGRC vs Traditional GRC Tools</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Traditional GRC Tools</th>
+                        <th>SAIGRC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Healthcare AI Focus</td>
+                        <td>Generic approach</td>
+                        <td>Specialized for healthcare AI</td>
+                    </tr>
+                    <tr>
+                        <td>Cost</td>
+                        <td>High licensing fees</td>
+                        <td>Free for small hospitals</td>
+                    </tr>
+                    <tr>
+                        <td>Customization</td>
+                        <td>Limited</td>
+                        <td>Fully customizable (open-source)</td>
+                    </tr>
+                    <tr>
+                        <td>Regulatory Updates</td>
+                        <td>Periodic updates</td>
+                        <td>Community-driven real-time updates</td>
+                    </tr>
+                    <tr>
+                        <td>Integration</td>
+                        <td>Closed ecosystem</td>
+                        <td>Open API architecture</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/demo.html">Demo</a></li>
+                    <li><a href="https://github.com/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

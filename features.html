@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - SAIGRC</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .feature-description {
+            display: none;
+            margin-top: 1rem;
+            color: #666;
+        }
+        
+        .feature-card:hover .feature-description {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features.html">Features</a>
+                <a href="/challenges.html">Challenges</a>
+                <a href="/benefits.html">Benefits</a>
+                <a href="/demo.html">Demo</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Features</h1>
+            <p>Comprehensive tools for healthcare AI governance, risk management, and compliance</p>
+        </section>
+
+        <section class="feature-grid">
+            <div class="feature-card">
+                <h3>Risk Assessment Tools</h3>
+                <p>Comprehensive risk evaluation for AI implementations</p>
+                <div class="feature-description">
+                    <ul>
+                        <li>Automated risk scoring</li>
+                        <li>Custom risk frameworks</li>
+                        <li>Real-time monitoring</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>Incident Reporting Dashboard</h3>
+                <p>Track and manage AI-related incidents</p>
+                <div class="feature-description">
+                    <ul>
+                        <li>Automated incident logging</li>
+                        <li>Severity classification</li>
+                        <li>Response tracking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>Regulatory Compliance Monitoring</h3>
+                <p>Stay compliant with healthcare AI regulations</p>
+                <div class="feature-description">
+                    <ul>
+                        <li>HIPAA compliance checks</li>
+                        <li>FDA guidelines tracking</li>
+                        <li>Compliance reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>AI Project Management Lifecycle</h3>
+                <p>End-to-end project management tools</p>
+                <div class="feature-description">
+                    <ul>
+                        <li>Project timeline tracking</li>
+                        <li>Milestone management</li>
+                        <li>Resource allocation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>Auditable Documentation</h3>
+                <p>Maintain comprehensive audit trails</p>
+                <div class="feature-description">
+                    <ul>
+                        <li>Automated documentation</li>
+                        <li>Version control</li>
+                        <li>Audit-ready reports</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/demo.html">Demo</a></li>
+                    <li><a href="https://github.com/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

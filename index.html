@@ -4,179 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAIGRC - AI Governance for Healthcare</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-            margin-top: 2rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        h2 {
-            font-size: 1.8rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-        p {
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        .feature-box {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 6px;
-            border: 1px solid #e9ecef;
-        }
-        .feature-box h3 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features.html">Features</a>
+                <a href="/challenges.html">Challenges</a>
+                <a href="/benefits.html">Benefits</a>
+                <a href="/demo.html">Demo</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <h1>SAIGRC</h1>
-        <p style="text-align: center; font-size: 1.2rem;">System for AI Governance, Risk, and Compliance</p>
-        
-        <div class="section">
-            <h2>Background</h2>
-            <ul>
-                <li>AI is transforming healthcare, with nearly 1,000 FDA-cleared medical devices incorporating AI, and adoption is accelerating across healthcare IT and device vendors.</li>
-                <li>However, incorporating AI into healthcare poses several challenges including issues affecting patient safety, privacy, security, bias, transparency, explainability, reproducibility, equity and interoperability.</li>
-                <li>The technology is complex and is moving fast - outputs are stochastic and not deterministic.</li>
-                <li>New regulations are arising, many of which have high penalties for non-compliance and will be enforced starting 2025.</li>
-                <li>Liability risk arising from the use of these AI models is yet another barrier preventing healthcare providers from deploying them.</li>
-            </ul>
-        </div>
+        <section class="hero">
+            <h1>SAIGRC: The World's First Open-Source AI GRC Tool for Healthcare</h1>
+            <p>Empowering healthcare organizations to safely and effectively implement AI solutions while ensuring compliance and managing risks.</p>
+            <a href="/demo.html" class="cta-button">Get Started</a>
+        </section>
 
-        <div class="section">
-            <h2>Our Solution</h2>
-            <p>The System for AI Governance, Risk, and Compliance (SAIGRC) is the world's first open-source Governance, Risk Management and Compliance platform designed specifically for healthcare AI. It addresses the critical challenges of integrating AI into a high-risk domain like healthcare, where issues such as patient safety, privacy, bias, transparency, and regulatory compliance are paramount.</p>
-            
-            <p>SAIGRC provides a structured collaboration tool kit built on clinically informed practices aligned with:</p>
-            <ul>
-                <li>NIST AI RMF framework</li>
-                <li>FDA's SaMD Guidelines</li>
-                <li>ONC's HTI-1 Rule</li>
-                <li>HHS-OIG Information Blocking Rule ($1 million penalty for non-compliance)</li>
-                <li>ISO 42001 Controls</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Features of SAIGRC</h2>
-            <div class="feature-grid">
-                <div class="feature-box">
-                    <h3>Governance</h3>
-                    <ul>
-                        <li>Prioritizes AI projects based on organizational goals</li>
-                        <li>Surfaces risks early and throughout the project lifecycle</li>
-                        <li>Ensures compliance with evolving legal and regulatory requirements</li>
-                    </ul>
-                </div>
-                <div class="feature-box">
-                    <h3>Risk Management</h3>
-                    <ul>
-                        <li>Tracks and helps mitigate risks such as data drift, system changes, and liability exposure</li>
-                        <li>Monitors performance metrics over time</li>
-                    </ul>
-                </div>
-                <div class="feature-box">
-                    <h3>Compliance</h3>
-                    <ul>
-                        <li>Facilitates audit readiness for ISO 42001</li>
-                        <li>Maintains a paper trail as the AI project progresses</li>
-                        <li>Demonstrate proper discharge of fiduciary duties in case of lawsuits</li>
-                    </ul>
-                </div>
-                <div class="feature-box">
-                    <h3>Collaboration</h3>
-                    <ul>
-                        <li>Empowers all stakeholders - clinical, administrative and executive - to participate in the development and integration of the AI project</li>
-                    </ul>
-                </div>
+        <section class="highlights">
+            <div class="highlight-card">
+                <h3>Open Source</h3>
+                <p>No vendor lock-in, fully customizable to your needs</p>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>Benefits of SAIGRC</h2>
-            <div class="feature-grid">
-                <div class="feature-box">
-                    <h3>Operational Oversight</h3>
-                    <ul>
-                        <li>Real-time updates on incidents</li>
-                        <li>Centralized view of AI projects and their states</li>
-                    </ul>
-                </div>
-                <div class="feature-box">
-                    <h3>Risk and Performance Monitoring</h3>
-                    <ul>
-                        <li>Ensures that risks affecting the project and the organization are surfaced early, surfaced often and surfaced throughout the lifecycle of the project</li>
-                        <li>Continuous tracking of ROI and strategic alignment</li>
-                    </ul>
-                </div>
-                <div class="feature-box">
-                    <h3>Compliance and Accountability</h3>
-                    <ul>
-                        <li>Enables adherence to emerging regulations</li>
-                        <li>Strengthens contract negotiations and legal defensibility</li>
-                    </ul>
-                </div>
-                <div class="feature-box">
-                    <h3>Collaboration and Customization</h3>
-                    <ul>
-                        <li>Provides a platform for multi-stakeholder participation</li>
-                        <li>Open-source design avoids vendor lock-in and allows customization</li>
-                    </ul>
-                </div>
+            <div class="highlight-card">
+                <h3>Healthcare Specialized</h3>
+                <p>Built specifically for healthcare AI risk and compliance</p>
             </div>
-        </div>
+            <div class="highlight-card">
+                <h3>Framework Aligned</h3>
+                <p>Built on NIST, ISO 42001, and Health AI Partnership</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Accessible</h3>
+                <p>Free for small hospitals, affordable for all</p>
+            </div>
+        </section>
 
-        <div class="section">
-            <p style="text-align: center;">
-                <a href="https://github.com/saigrc/SAIGRC">View on GitHub</a>
-            </p>
-        </div>
+        <section class="content">
+            <!-- Previous content can go here -->
+        </section>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/demo.html">Demo</a></li>
+                    <li><a href="https://github.com/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 

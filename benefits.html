@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits - SAIGRC</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 1rem 2rem;
+            position: relative;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: calc(50% - 2rem);
+            margin: 2rem 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            margin-left: calc(50% + 2rem);
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/features.html">Features</a>
+                <a href="/challenges.html">Challenges</a>
+                <a href="/benefits.html">Benefits</a>
+                <a href="/demo.html">Demo</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Benefits</h1>
+            <p>Discover how SAIGRC transforms healthcare AI implementation</p>
+        </section>
+
+        <section class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Operational Oversight</h3>
+                <ul>
+                    <li>Real-time updates on incidents</li>
+                    <li>Centralized view of AI projects</li>
+                    <li>Comprehensive monitoring dashboard</li>
+                </ul>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Risk and Performance Monitoring</h3>
+                <ul>
+                    <li>Early risk detection</li>
+                    <li>Continuous performance tracking</li>
+                    <li>ROI and strategic alignment monitoring</li>
+                </ul>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Compliance and Accountability</h3>
+                <ul>
+                    <li>Regulatory adherence</li>
+                    <li>Enhanced legal defensibility</li>
+                    <li>Stronger contract negotiations</li>
+                </ul>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Collaboration and Customization</h3>
+                <ul>
+                    <li>Multi-stakeholder platform</li>
+                    <li>No vendor lock-in</li>
+                    <li>Customizable workflows</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Implementation Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Initial Assessment</h3>
+                    <p>Evaluate current AI governance needs and gaps</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Platform Setup</h3>
+                    <p>Configure SAIGRC according to organizational requirements</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Team Training</h3>
+                    <p>Comprehensive training for all stakeholders</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Go-Live</h3>
+                    <p>Full implementation with ongoing support</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"SAIGRC has transformed how we manage our AI implementations, providing unprecedented visibility and control."</p>
+                <div class="testimonial-author">- Chief Innovation Officer, Major Healthcare System</div>
+            </div>
+            <div class="testimonial">
+                <p>"The open-source nature of SAIGRC allowed us to customize it perfectly for our needs while maintaining compliance."</p>
+                <div class="testimonial-author">- Director of AI Initiatives, Leading Research Hospital</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/demo.html">Demo</a></li>
+                    <li><a href="https://github.com/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
