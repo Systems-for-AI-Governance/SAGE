@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - SAIGRC</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .docs-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .docs-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .docs-sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            height: fit-content;
+        }
+        
+        .docs-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .docs-sidebar li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .docs-sidebar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .docs-sidebar a:hover {
+            background: #f0f0f0;
+        }
+        
+        .docs-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .docs-section {
+            margin-bottom: 3rem;
+        }
+        
+        .docs-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/Saigrc/">Home</a>
+                <a href="/Saigrc/features.html">Features</a>
+                <a href="/Saigrc/challenges.html">Challenges</a>
+                <a href="/Saigrc/benefits.html">Benefits</a>
+                <a href="/Saigrc/demo.html">Demo</a>
+                <a href="/Saigrc/blog.html">Blog</a>
+                <a href="/Saigrc/docs.html">Docs</a>
+                <a href="/Saigrc/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Documentation</h1>
+            <p>Comprehensive guides and documentation for SAIGRC implementation</p>
+        </section>
+
+        <div class="docs-container">
+            <aside class="docs-sidebar">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#installation">Installation Guide</a></li>
+                    <li><a href="#configuration">Configuration</a></li>
+                    <li><a href="#api-reference">API Reference</a></li>
+                    <li><a href="#frameworks">Framework Integration</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                </ul>
+            </aside>
+
+            <main class="docs-content">
+                <section id="getting-started" class="docs-section">
+                    <h2>Getting Started</h2>
+                    <p>SAIGRC is an open-source platform designed to help healthcare organizations manage AI governance, risk, and compliance. This guide will help you get started with implementing SAIGRC in your organization.</p>
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Python 3.8 or higher</li>
+                        <li>Docker (recommended)</li>
+                        <li>PostgreSQL database</li>
+                    </ul>
+                </section>
+
+                <section id="installation" class="docs-section">
+                    <h2>Installation Guide</h2>
+                    <p>You can install SAIGRC using Docker or from source:</p>
+                    <div class="code-block">
+                        <code>
+                            # Using Docker<br>
+                            docker pull saigrc/platform<br>
+                            docker-compose up -d
+                        </code>
+                    </div>
+                    <div class="code-block">
+                        <code>
+                            # From source<br>
+                            git clone https://github.com/Systems-for-AI-Governance/saig-health.git<br>
+                            cd saig-health<br>
+                            pip install -r requirements.txt
+                        </code>
+                    </div>
+                </section>
+
+                <section id="configuration" class="docs-section">
+                    <h2>Configuration</h2>
+                    <p>Configure SAIGRC by editing the config.yaml file:</p>
+                    <div class="code-block">
+                        <code>
+                            database:<br>
+                            &nbsp;&nbsp;host: localhost<br>
+                            &nbsp;&nbsp;port: 5432<br>
+                            &nbsp;&nbsp;name: saigrc<br>
+                            <br>
+                            security:<br>
+                            &nbsp;&nbsp;enable_audit_logs: true<br>
+                            &nbsp;&nbsp;encryption_key: your-secret-key
+                        </code>
+                    </div>
+                </section>
+
+                <section id="api-reference" class="docs-section">
+                    <h2>API Reference</h2>
+                    <p>SAIGRC provides a RESTful API for integration with your existing systems:</p>
+                    <h3>Authentication</h3>
+                    <div class="code-block">
+                        <code>
+                            POST /api/v1/auth/token<br>
+                            {<br>
+                            &nbsp;&nbsp;"username": "your-username",<br>
+                            &nbsp;&nbsp;"password": "your-password"<br>
+                            }
+                        </code>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/Saigrc/features.html">Features</a></li>
+                    <li><a href="/Saigrc/demo.html">Demo</a></li>
+                    <li><a href="https://github.com/Systems-for-AI-Governance/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
