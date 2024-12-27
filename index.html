@@ -5,6 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAIGRC - AI Governance for Healthcare</title>
     <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .challenges-section {
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: white;
+            padding: 3rem 2rem;
+            margin: 4rem -2rem;
+            text-align: center;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .challenge-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .challenge-card:hover {
+            transform: scale(1.05);
+        }
+
+        .frameworks-section {
+            margin: 4rem 0;
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .framework-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .framework-card:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -30,22 +113,66 @@
             <a href="/Saigrc/demo.html" class="cta-button">Get Started</a>
         </section>
 
-        <section class="highlights">
-            <div class="highlight-card">
-                <h3>Open Source</h3>
-                <p>No vendor lock-in, fully customizable to your needs</p>
+        <section class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">1,000+</div>
+                <p>FDA-cleared AI medical devices</p>
             </div>
-            <div class="highlight-card">
-                <h3>Healthcare Specialized</h3>
-                <p>Built specifically for healthcare AI risk and compliance</p>
+            <div class="stat-card">
+                <div class="stat-number">2025</div>
+                <p>New regulations enforcement</p>
             </div>
-            <div class="highlight-card">
-                <h3>Framework Aligned</h3>
-                <p>Built on NIST, ISO 42001, and Health AI Partnership</p>
+            <div class="stat-card">
+                <div class="stat-number">$1M</div>
+                <p>Non-compliance penalty</p>
             </div>
-            <div class="highlight-card">
-                <h3>Accessible</h3>
-                <p>Free for small hospitals, affordable for all</p>
+        </section>
+
+        <section class="challenges-section">
+            <h2>Healthcare AI Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <h3>Patient Safety & Privacy</h3>
+                    <p>Critical concerns requiring robust governance and protection measures</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Complex Technology</h3>
+                    <p>Stochastic outputs and rapid technological advancement</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Regulatory Compliance</h3>
+                    <p>Evolving regulations with significant penalties</p>
+                </div>
+                <div class="challenge-card">
+                    <h3>Liability Risk</h3>
+                    <p>Barriers preventing healthcare providers from AI adoption</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="frameworks-section">
+            <h2>Built on Industry Standards</h2>
+            <div class="framework-grid">
+                <div class="framework-card">
+                    <h3>NIST AI RMF</h3>
+                    <p>Aligned with national standards</p>
+                </div>
+                <div class="framework-card">
+                    <h3>FDA SaMD</h3>
+                    <p>Following FDA guidelines</p>
+                </div>
+                <div class="framework-card">
+                    <h3>ONC HTI-1</h3>
+                    <p>Healthcare interoperability</p>
+                </div>
+                <div class="framework-card">
+                    <h3>ISO 42001</h3>
+                    <p>International standards</p>
+                </div>
+                <div class="framework-card">
+                    <h3>HHS-OIG</h3>
+                    <p>Information blocking compliance</p>
+                </div>
             </div>
         </section>
 
