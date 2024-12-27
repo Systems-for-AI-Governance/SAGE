@@ -4,4 +4,8 @@ baseurl: "/Saigrc"
 url: "https://systems-for-ai-governance.github.io"
 
 # Blog settings
-permalink: /blog/:year/:month/:day/:title/ 
+permalink: /blog.html/:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-primer 
