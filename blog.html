@@ -1,9 +1,13 @@
+---
+layout: default
+title: Blog - SAIGRC
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - SAIGRC</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="styles/main.css">
     <style>
         .blog-grid {
@@ -61,18 +65,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">SAIGRC</a>
-            <div class="nav-links">
-                <a href="/Saigrc/">Home</a>
-                <a href="/Saigrc/solution.html">Our Solution</a>
-                <a href="/Saigrc/blog.html">Blog</a>
-                <a href="/Saigrc/docs.html">Docs</a>
-                <a href="/Saigrc/contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
+    {% include nav.html %}
 
     <div class="container">
         <section class="hero">
@@ -81,68 +74,24 @@
         </section>
 
         <section class="blog-grid">
+            {% for post in site.posts %}
             <article class="blog-post">
-                <h2>Understanding the FDA's New AI/ML Guidelines</h2>
-                <div class="post-meta">Posted on March 1, 2024 by SAIGRC Team</div>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</div>
                 <div class="post-excerpt">
-                    <p>The FDA recently released new guidelines for AI/ML-based Software as a Medical Device (SaMD). This post breaks down the key requirements and implications for healthcare providers...</p>
+                    {{ post.excerpt }}
                 </div>
-                <a href="#" class="read-more">Read More →</a>
+                <a href="{{ post.url }}" class="read-more">Read More →</a>
                 <div class="categories">
-                    <span class="category-tag">Regulations</span>
-                    <span class="category-tag">FDA</span>
-                    <span class="category-tag">SaMD</span>
+                    {% for category in post.categories %}
+                    <span class="category-tag">{{ category }}</span>
+                    {% endfor %}
                 </div>
             </article>
-
-            <article class="blog-post">
-                <h2>Best Practices for AI Risk Management in Healthcare</h2>
-                <div class="post-meta">Posted on February 15, 2024 by SAIGRC Team</div>
-                <div class="post-excerpt">
-                    <p>Implementing AI in healthcare requires careful risk management. Learn about the key considerations and best practices for managing AI-related risks in healthcare settings...</p>
-                </div>
-                <a href="#" class="read-more">Read More →</a>
-                <div class="categories">
-                    <span class="category-tag">Risk Management</span>
-                    <span class="category-tag">Best Practices</span>
-                    <span class="category-tag">Healthcare AI</span>
-                </div>
-            </article>
-
-            <article class="blog-post">
-                <h2>ISO 42001: What Healthcare Providers Need to Know</h2>
-                <div class="post-meta">Posted on February 1, 2024 by SAIGRC Team</div>
-                <div class="post-excerpt">
-                    <p>ISO 42001 is setting new standards for AI management systems. This post explores the key requirements and how healthcare providers can prepare for compliance...</p>
-                </div>
-                <a href="#" class="read-more">Read More →</a>
-                <div class="categories">
-                    <span class="category-tag">ISO Standards</span>
-                    <span class="category-tag">Compliance</span>
-                    <span class="category-tag">Healthcare</span>
-                </div>
-            </article>
+            {% endfor %}
         </section>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h3>SAIGRC</h3>
-                <p>Making AI governance accessible for healthcare</p>
-            </div>
-            <div>
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/Saigrc/features.html">Features</a></li>
-                    <li><a href="https://github.com/Systems-for-AI-Governance/saig-health">GitHub</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Contact</h3>
-                <p>Email: contact@saigrc.org</p>
-            </div>
-        </div>
-    </footer>
+    {% include footer.html %}
 </body>
 </html> 

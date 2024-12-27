@@ -1,0 +1,7 @@
+title: SAIGRC Blog
+description: Insights and updates on healthcare AI governance, risk management, and compliance
+baseurl: "/Saigrc"
+url: "https://your-username.github.io"
+
+# Blog settings
+permalink: /blog/:year/:month/:day/:title/ 
