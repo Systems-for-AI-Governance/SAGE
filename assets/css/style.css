@@ -1,0 +1,26 @@
+/* Add these styles to your existing CSS */
+.post-preview {
+    padding: 20px 0;
+}
+
+.post-title {
+    margin-bottom: 15px;
+}
+
+.post-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: #007bff;
+}
+
+.post-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.post-excerpt {
+    margin: 15px 0;
+} 
