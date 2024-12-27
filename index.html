@@ -87,6 +87,31 @@
             background: var(--primary-color);
             color: white;
         }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -108,7 +133,9 @@
         <section class="hero">
             <h1>SAIGRC: The World's First Open-Source AI GRC Tool for Healthcare</h1>
             <p>Empowering healthcare organizations to safely and effectively implement AI solutions while ensuring compliance and managing risks.</p>
-            <a href="/Saigrc/demo.html" class="cta-button">Get Started</a>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/d/crdz-cn4-hrc/saigrc-demo" class="cta-button">Schedule a Demo</a>
+            </div>
         </section>
 
         <section class="stats-container">
