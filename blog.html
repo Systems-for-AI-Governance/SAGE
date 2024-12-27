@@ -65,7 +65,18 @@ title: Blog - SAIGRC
     </style>
 </head>
 <body>
-    {% include nav.html %}
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/Saigrc/">Home</a>
+                <a href="/Saigrc/solution.html">Our Solution</a>
+                <a href="/Saigrc/blog.html">Blog</a>
+                <a href="/Saigrc/docs.html">Docs</a>
+                <a href="/Saigrc/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <section class="hero">
@@ -76,12 +87,12 @@ title: Blog - SAIGRC
         <section class="blog-grid">
             {% for post in site.posts %}
             <article class="blog-post">
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
                 <div class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</div>
                 <div class="post-excerpt">
                     {{ post.excerpt }}
                 </div>
-                <a href="{{ post.url }}" class="read-more">Read More →</a>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
                 <div class="categories">
                     {% for category in post.categories %}
                     <span class="category-tag">{{ category }}</span>
@@ -92,6 +103,24 @@ title: Blog - SAIGRC
         </section>
     </div>
 
-    {% include footer.html %}
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/Saigrc/features.html">Features</a></li>
+                    <li><a href="https://github.com/Systems-for-AI-Governance/saig-health">GitHub</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
