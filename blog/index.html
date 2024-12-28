@@ -2,82 +2,118 @@
 layout: default
 title: Blog - SAIGRC
 ---
-<div class="container">
-    <section class="hero">
-        <h1>SAIGRC Blog</h1>
-        <p>Insights and updates on healthcare AI governance, risk management, and compliance</p>
-    </section>
-
-    <section class="blog-grid">
-        {% for post in site.posts %}
-        <article class="blog-post">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            <div class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</div>
-            <div class="post-excerpt">
-                {{ post.excerpt }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .blog-post {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .blog-post h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .post-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .post-excerpt {
+            margin: 1rem 0;
+        }
+        
+        .read-more {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .categories {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .category-tag {
+            background: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/Saigrc/" class="nav-logo">SAIGRC</a>
+            <div class="nav-links">
+                <a href="/Saigrc/">Home</a>
+                <a href="/Saigrc/solution.html">Our Solution</a>
+                <a href="/Saigrc/blog/">Blog</a>
+                <a href="/Saigrc/docs.html">Docs</a>
+                <a href="/Saigrc/contact.html">Contact</a>
             </div>
-            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
-            <div class="categories">
-                {% for category in post.categories %}
-                <span class="category-tag">{{ category }}</span>
-                {% endfor %}
-            </div>
-        </article>
-        {% endfor %}
-    </section>
-</div>
+        </div>
+    </nav>
 
-<style>
-    .blog-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        margin: 2rem 0;
-    }
-    
-    .blog-post {
-        background: white;
-        padding: 2rem;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-    }
-    
-    .blog-post h2 {
-        color: var(--primary-color);
-        margin-top: 0;
-    }
-    
-    .post-meta {
-        color: #666;
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-    
-    .post-excerpt {
-        margin: 1rem 0;
-    }
-    
-    .read-more {
-        color: var(--secondary-color);
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    .read-more:hover {
-        text-decoration: underline;
-    }
-    
-    .categories {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-    
-    .category-tag {
-        background: #f0f0f0;
-        padding: 0.25rem 0.75rem;
-        border-radius: 15px;
-        font-size: 0.9rem;
-        color: #666;
-    }
-</style> 
+    <div class="container">
+        <section class="hero">
+            <h1>SAIGRC Blog</h1>
+            <p>Insights and updates on healthcare AI governance, risk management, and compliance</p>
+        </section>
+
+        <section class="blog-grid">
+            {% for post in site.posts %}
+            <article class="blog-post">
+                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                <div class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</div>
+                <div class="post-excerpt">
+                    {{ post.excerpt }}
+                </div>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+                <div class="categories">
+                    {% for category in post.categories %}
+                    <span class="category-tag">{{ category }}</span>
+                    {% endfor %}
+                </div>
+            </article>
+            {% endfor %}
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>SAIGRC</h3>
+                <p>Making AI governance accessible for healthcare</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@saigrc.org</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
