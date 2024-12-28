@@ -2,18 +2,55 @@
 layout: default
 ---
 <div class="container">
-    <article class="blog-post">
+    <section class="hero">
         <h1>{{ page.title }}</h1>
-        <div class="post-meta">
-            Posted on {{ page.date | date: "%B %d, %Y" }} by {{ page.author }}
-        </div>
+        <div class="post-meta">Posted on {{ page.date | date: "%B %d, %Y" }} by {{ page.author }}</div>
+    </section>
+
+    <article class="blog-post">
         <div class="post-content">
             {{ content }}
         </div>
+        
         <div class="categories">
             {% for category in page.categories %}
             <span class="category-tag">{{ category }}</span>
             {% endfor %}
         </div>
     </article>
-</div> 
+</div>
+
+<style>
+    .blog-post {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        margin: 2rem 0;
+    }
+
+    .post-meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .post-content {
+        margin: 2rem 0;
+        line-height: 1.6;
+    }
+
+    .categories {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .category-tag {
+        background: #f0f0f0;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+</style> 
