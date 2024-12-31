@@ -3,8 +3,11 @@ layout: default
 ---
 <div class="container">
     <section class="hero">
-        <h1>{{ page.title }}</h1>
-        <div class="post-meta">Posted on {{ page.date | date: "%B %d, %Y" }} by {{ page.author }}</div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <span class="post-date">Posted on {{ page.date | date: "%B %d, %Y" }}</span>
+            <span class="post-author">by {{ page.author }}</span>
+        </div>
     </section>
 
     <article class="blog-post">
