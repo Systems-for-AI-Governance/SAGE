@@ -112,6 +112,68 @@
                 align-items: center;
             }
         }
+
+        .principles-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 0 1rem;
+        }
+
+        .principle-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .principle-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .principle-details {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .principle-card.expanded .principle-details {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        .principle-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .principle-details li {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -130,8 +192,8 @@
 
     <div class="container">
         <section class="hero">
-            <h1>SAGE: The World's First Open-Source AI GRC Tool for Healthcare</h1>
-            <p>Empowering healthcare organizations to safely and effectively implement AI solutions while ensuring compliance and managing risks.</p>
+            <h1>SAGE: An Open-Source System for AI Governance and Enablement in Healthcare</h1>
+            <p>We help healthcare providers implement AI solutions according to state-of-the-art best practices.</p>
             <div class="hero-buttons">
                 <a href="https://calendly.com/d/crdz-cn4-hrc/SAGE-demo" class="cta-button">Schedule a Demo</a>
             </div>
@@ -149,6 +211,76 @@
             <div class="stat-card">
                 <div class="stat-number">$1M</div>
                 <p>Non-compliance penalty</p>
+            </div>
+        </section>
+
+        <section class="principles-section">
+            <h2>Five Pillars of Trustworthy AI</h2>
+            <p>SAGE ensures your AI solutions meet healthcare's highest standards</p>
+            
+            <div class="principles-grid">
+                <div class="principle-card" onclick="expandCard(this)">
+                    <div class="principle-icon">🎯</div>
+                    <h3>Usefulness, Usability & Efficacy</h3>
+                    <div class="principle-details">
+                        <ul>
+                            <li>Validate clinical effectiveness</li>
+                            <li>Ensure seamless workflow integration</li>
+                            <li>Monitor real-world performance</li>
+                            <li>Track user satisfaction metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principle-card" onclick="expandCard(this)">
+                    <div class="principle-icon">⚖️</div>
+                    <h3>Fairness, Equity & Bias</h3>
+                    <div class="principle-details">
+                        <ul>
+                            <li>Detect and mitigate algorithmic bias</li>
+                            <li>Ensure equitable outcomes</li>
+                            <li>Validate across diverse populations</li>
+                            <li>Monitor demographic performance parity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principle-card" onclick="expandCard(this)">
+                    <div class="principle-icon">🛡️</div>
+                    <h3>Safety</h3>
+                    <div class="principle-details">
+                        <ul>
+                            <li>Implement robust risk management</li>
+                            <li>Ensure clinical safety protocols</li>
+                            <li>Monitor adverse events</li>
+                            <li>Maintain regulatory compliance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principle-card" onclick="expandCard(this)">
+                    <div class="principle-icon">🔍</div>
+                    <h3>Transparency & Intelligibility</h3>
+                    <div class="principle-details">
+                        <ul>
+                            <li>Generate explainability reports</li>
+                            <li>Create model facts cards in keeping with ONC HTI-1</li>
+                            <li>Maintain clear audit trails</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="principle-card" onclick="expandCard(this)">
+                    <div class="principle-icon">🔒</div>
+                    <h3>Privacy & Security</h3>
+                    <div class="principle-details">
+                        <ul>
+                            <li>Protect sensitive health data</li>
+                            <li>Ensure HIPAA compliance</li>
+                            <li>Monitor security threats</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -179,23 +311,15 @@
             <div class="framework-grid">
                 <div class="framework-card">
                     <h3>NIST AI RMF</h3>
-                    <p>Aligned with national standards</p>
                 </div>
                 <div class="framework-card">
                     <h3>FDA SaMD</h3>
-                    <p>Following FDA guidelines</p>
                 </div>
                 <div class="framework-card">
-                    <h3>ONC HTI-1</h3>
-                    <p>Healthcare interoperability</p>
+                    <h3>HAIP</h3>
                 </div>
                 <div class="framework-card">
                     <h3>ISO 42001</h3>
-                    <p>International standards</p>
-                </div>
-                <div class="framework-card">
-                    <h3>HHS-OIG</h3>
-                    <p>Information blocking compliance</p>
                 </div>
             </div>
         </section>
@@ -217,5 +341,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function expandCard(card) {
+            const wasExpanded = card.classList.contains('expanded');
+            
+            // Collapse all cards
+            document.querySelectorAll('.principle-card').forEach(c => {
+                c.classList.remove('expanded');
+            });
+            
+            // If the clicked card wasn't expanded, expand it
+            if (!wasExpanded) {
+                card.classList.add('expanded');
+            }
+        }
+    </script>
 </body>
 </html> 
